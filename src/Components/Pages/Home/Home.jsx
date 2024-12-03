@@ -3,6 +3,8 @@ import Slide from "./Slide";
 import Service from "./Service";
 import LastProduct from "./LastProduct";
 import Banner from "./Banner";
+import BestSelling from "./BestSelling";
+import DealOfTheDay from "./DealOfTheDay";
 
 const Home = () => {
   return (
@@ -11,6 +13,8 @@ const Home = () => {
       <Service />
       <LastProduct />
       <Banner />
+      <BestSelling />
+      <DealOfTheDay />
     </>
   );
 };

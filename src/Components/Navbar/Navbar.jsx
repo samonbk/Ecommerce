@@ -12,28 +12,54 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const electronicsRef = useRef(null);
   const [nav, setNav] = useState(false);
+  const navRef = useRef(null);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const nav = navRef.current;
+    const navPosy = nav.getBoundingClientRect().top;
+
+    const handleScroll = () => {
+      if (window.scrollY >= navPosy) {
+        nav.classList.add("fixed", "top-0");
+      } else {
+        nav.classList.remove("fixed", "top-0");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   function handleShowList(index) {
     const items = document.querySelectorAll(".electronic-items");
     if (items) {
       items.forEach((item, i) => {
-        item.classList.remove(`h-246px`);
+        if (i !== index) {
+          item.classList.remove("h-246px");
+        } else {
+          if (item.classList.contains("h-246px")) {
+            item.classList.remove("h-246px");
+          } else {
+            item.classList.add("h-246px");
+          }
+        }
       });
-      items[index].classList.add(`h-246px`);
     }
   }
 
   return (
     <>
+      {/* top nav  */}
       <nav
-        className="w-full h-14 bg-cyan-500 text-white font-semibold z-10"
-        style={{ position: "sticky", top: "0", left: "0" }}
+        ref={navRef}
+        className="w-full h-14 bg-cyan-500 text-white font-semibold z-10 left-0"
       >
         <div className="max-w-[1690px] mx-auto h-full flex items-center justify-between lg:justify-start px-3">
           <div>
-            <div className="border-r relative lg:w-[270px]">
+            <div className="border-r relative lg:w-[280px]">
               <div
                 className="flex lg:hidden gap-3 items-center cursor-pointer pr-4"
                 onClick={() => {
@@ -90,7 +116,7 @@ const Navbar = () => {
                     </ul>
                   </div>
                   <div
-                    className={`flex lg:hidden items-center gap-2 z-20 absolute top-[20px] -translate-y-1/2 right-[-36px] cursor-pointer bg-cyan-500 rounded-r-3xl py-2 px-2`}
+                    className={`flex lg:hidden  gap-2 z-20 absolute top-[20px] -translate-y-1/2 right-[-36px] cursor-pointer bg-cyan-500 rounded-r-3xl w-10 h-10 items-center justify-center`}
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     <div className="text-xl flex items-center text-white">
@@ -262,6 +288,8 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
+
+      {/* buttom nav  */}
       <nav
         className="lg:hidden flex w-full justify-around h-[70px] items-center bg-white fixed left-0 bottom-0 text-2xl text-black *:pb-1 z-40"
         style={{ boxShadow: "0px -1px 10px rgba(0, 0, 0, 0.04)" }}

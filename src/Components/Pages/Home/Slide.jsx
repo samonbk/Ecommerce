@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -6,16 +6,23 @@ import { Navigation } from "swiper/modules";
 import slide1 from "../../../assets/image/slide-1.jfif";
 import slide2 from "../../../assets/image/slide-2.jfif";
 import slide3 from "../../../assets/image/slide-3.jfif";
+import { GrFormNextLink, GrFormPreviousLink } from "react-icons/gr";
 
 const Slide = () => {
+  const nextRef = useRef(null);
+  const preRef = useRef(null);
   return (
     <>
       {/* Slider */}
       <div className="w-full font-semibold">
         <Swiper
-          navigation={true}
-          modules={[Navigation]}
+          navigation={{ nextEl: nextRef.current, prevEl: preRef.current }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.params.navigation.prevEl = preRef.current;
+          }}
           loop={true}
+          modules={[Navigation]}
           className="mySwiper w-full"
         >
           <SwiperSlide>
@@ -117,6 +124,18 @@ const Slide = () => {
               </div>
             </div>
           </SwiperSlide>
+          <div
+            ref={preRef}
+            className="custom-button prev-button bg-cyan-500 z-50 w-8 h-8 rounded-full flex items-center justify-center text-white absolute left-3 top-1/2 -translate-y-1/2 cursor-pointer"
+          >
+            <GrFormPreviousLink />
+          </div>
+          <div
+            ref={nextRef}
+            className="custom-button next-button bg-cyan-500 z-50 w-8 h-8 rounded-full flex items-center justify-center text-white absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
+          >
+            <GrFormNextLink />
+          </div>
         </Swiper>
       </div>
     </>
