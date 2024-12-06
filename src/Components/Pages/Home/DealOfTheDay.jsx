@@ -28,7 +28,7 @@ const DealOfTheDay = () => {
   return (
     <section className="max-w-[1690px] mx-auto lg:p-8 p-3">
       <div className="flex items-center justify-between border-b">
-        <h2 className="text-3xl font-semibold lg:py-5 py-2 border-b border-cyan-500">
+        <h2 className="text-2xl font-semibold lg:py-5 py-2 border-b border-cyan-500">
           Deal Of The Day
         </h2>
         <Link className="underline uppercase text-sm ">View all products</Link>
@@ -45,7 +45,7 @@ const DealOfTheDay = () => {
             swiper.params.navigation.nextEl = nextButtonRef.current;
             swiper.params.navigation.prevEl = prevButtonRef.current;
           }}
-          loop={true}
+          // loop={true}
           breakpoints={{
             640: {
               slidesPerView: 1,
@@ -116,13 +116,13 @@ const DealOfTheDay = () => {
           ))}
           <div
             ref={prevButtonRef}
-            className="custom-button prev-button bg-cyan-500 z-50 w-8 h-8 rounded-full flex items-center justify-center text-white absolute left-3 top-1/2 -translate-y-1/2 cursor-pointer"
+            className="custom-button prev-button bg-cyan-500 z-50 w-6 md:h-8 h-6 md:w-8 rounded-full flex items-center justify-center text-white absolute left-1 top-1/2 -translate-y-1/2 cursor-pointer"
           >
             <GrFormPreviousLink />
           </div>
           <div
             ref={nextButtonRef}
-            className="custom-button next-button bg-cyan-500 z-50 w-8 h-8 rounded-full flex items-center justify-center text-white absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
+            className="custom-button next-button bg-cyan-500 z-50 w-6 md:h-8 h-6 md:w-8 rounded-full flex items-center justify-center text-white absolute right-1 top-1/2 -translate-y-1/2 cursor-pointer"
           >
             <GrFormNextLink />
           </div>

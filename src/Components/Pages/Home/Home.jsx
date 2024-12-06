@@ -5,6 +5,7 @@ import LastProduct from "./LastProduct";
 import Banner from "./Banner";
 import BestSelling from "./BestSelling";
 import DealOfTheDay from "./DealOfTheDay";
+import ByCate from "./ByCate";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Banner />
       <BestSelling />
       <DealOfTheDay />
+      <ByCate />
     </>
   );
 };

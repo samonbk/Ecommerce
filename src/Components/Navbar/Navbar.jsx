@@ -132,7 +132,7 @@ const Navbar = () => {
               !nav ? "left-[-100%]" : "left-0"
             } lg:pl-8 lg:h-auto h-screenlg:max-w-auto max-w-full text-left z-20`}
           >
-            <ul className="flex lg:p-0 p-3 lg:w-auto w-[250px] lg:items-center lg:gap-10 gap-2 lg:flex-row flex-col lg:bg-transparent bg-gray-200 lg:text-white lg:h-auto h-screen overflow-y-auto lg:overflow-y-visible text-gray-700">
+            <ul className="flex lg:p-0 p-3 lg:w-auto w-[250px] lg:items-center xl:gap-10 lg:gap-4 gap-2 lg:flex-row flex-col lg:bg-transparent bg-gray-200 lg:text-white lg:h-auto h-screen overflow-y-auto lg:overflow-y-visible text-gray-700">
               <li className="flex lg:hidden justify-between items-center border-b border-gray-300 py-2">
                 <p>MEMU</p>
                 <div

@@ -9,17 +9,20 @@ import slide3 from "../../../assets/image/slide-3.jfif";
 import { GrFormNextLink, GrFormPreviousLink } from "react-icons/gr";
 
 const Slide = () => {
-  const nextRef = useRef(null);
-  const preRef = useRef(null);
+  const nextButtonRef = useRef(null);
+  const prevButtonRef = useRef(null);
   return (
     <>
       {/* Slider */}
       <div className="w-full font-semibold">
         <Swiper
-          navigation={{ nextEl: nextRef.current, prevEl: preRef.current }}
+          navigation={{
+            nextEl: nextButtonRef.current,
+            prevEl: prevButtonRef.current,
+          }}
           onBeforeInit={(swiper) => {
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.params.navigation.prevEl = preRef.current;
+            swiper.params.navigation.nextEl = nextButtonRef.current;
+            swiper.params.navigation.prevEl = prevButtonRef.current;
           }}
           loop={true}
           modules={[Navigation]}
@@ -125,14 +128,14 @@ const Slide = () => {
             </div>
           </SwiperSlide>
           <div
-            ref={preRef}
-            className="custom-button prev-button bg-cyan-500 z-50 w-8 h-8 rounded-full flex items-center justify-center text-white absolute left-3 top-1/2 -translate-y-1/2 cursor-pointer"
+            ref={prevButtonRef}
+            className="custom-button prev-button bg-cyan-500 z-50 w-7 md:h-8 h-7 md:w-8 rounded-full flex items-center justify-center text-white absolute left-1 top-1/2 -translate-y-1/2 cursor-pointer"
           >
             <GrFormPreviousLink />
           </div>
           <div
-            ref={nextRef}
-            className="custom-button next-button bg-cyan-500 z-50 w-8 h-8 rounded-full flex items-center justify-center text-white absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
+            ref={nextButtonRef}
+            className="custom-button next-button bg-cyan-500 z-50 w-7 md:h-8 h-7 md:w-8 rounded-full flex items-center justify-center text-white absolute right-1 top-1/2 -translate-y-1/2 cursor-pointer"
           >
             <GrFormNextLink />
           </div>
