@@ -1,6 +1,6 @@
 import React from "react";
 import banner2_watch from "../../../assets/Image/banner2-watch.webp";
-import banner2_phone from "../../../assets/image/banner2-phone.webp";
+import banner2_phone from "../../../assets/Image/banner2-phone.webp";
 import banner2_headphone from "../../../assets/Image/banner2-headphone.webp";
 
 const Banner2 = () => {
