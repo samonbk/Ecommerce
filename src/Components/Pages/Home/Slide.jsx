@@ -2,7 +2,8 @@ import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import "swiper/css/autoplay";
+import { Autoplay, Navigation } from "swiper/modules";
 import slide1 from "../../../assets/image/slide-1.jfif";
 import slide2 from "../../../assets/image/slide-2.jfif";
 import slide3 from "../../../assets/image/slide-3.jfif";
@@ -24,8 +25,9 @@ const Slide = () => {
             swiper.params.navigation.nextEl = nextButtonRef.current;
             swiper.params.navigation.prevEl = prevButtonRef.current;
           }}
+          autoplay={{ delay: 3000 }}
           loop={true}
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           className="mySwiper w-full"
         >
           <SwiperSlide>

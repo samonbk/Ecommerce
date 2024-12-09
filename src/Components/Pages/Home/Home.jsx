@@ -6,6 +6,10 @@ import Banner from "./Banner";
 import BestSelling from "./BestSelling";
 import DealOfTheDay from "./DealOfTheDay";
 import ByCate from "./ByCate";
+import Banner2 from "./Banner2";
+import Feature from "./Feature";
+import ClientMassage from "./ClientMassage";
+import Partner from "./Partner";
 
 const Home = () => {
   return (
@@ -17,6 +21,10 @@ const Home = () => {
       <BestSelling />
       <DealOfTheDay />
       <ByCate />
+      <Banner2 />
+      <Feature />
+      <ClientMassage />
+      <Partner />
     </>
   );
 };
