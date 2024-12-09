@@ -1,6 +1,6 @@
 import React from "react";
 import smile_man from "../../../assets/Image/smile-man.webp";
-import apple_product from "../../../assets/image/apple-product.webp";
+import apple_product from "../../../assets/Image/apple-product.webp";
 
 const Banner = () => {
   return (

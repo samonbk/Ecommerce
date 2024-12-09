@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
-// import "swiper/css/centeredslides";
 
 import partner1 from "../../../assets/Image/partner-1.png";
 import partner2 from "../../../assets/Image/partner-2.png";

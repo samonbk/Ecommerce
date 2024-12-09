@@ -6,7 +6,6 @@ import { Link, NavLink } from "react-router-dom";
 import { GoHome } from "react-icons/go";
 import { CiUser, CiShop, CiSearch } from "react-icons/ci";
 import { BsCart2 } from "react-icons/bs";
-import { CgSearch } from "react-icons/cg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

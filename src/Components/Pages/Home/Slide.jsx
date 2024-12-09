@@ -4,9 +4,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import { Autoplay, Navigation } from "swiper/modules";
-import slide1 from "../../../assets/image/slide-1.jfif";
-import slide2 from "../../../assets/image/slide-2.jfif";
-import slide3 from "../../../assets/image/slide-3.jfif";
+import slide1 from "../../../assets/Image/slide-1.jfif";
+import slide2 from "../../../assets/Image/slide-2.jfif";
+import slide3 from "../../../assets/Image/slide-3.jfif";
 import { GrFormNextLink, GrFormPreviousLink } from "react-icons/gr";
 
 const Slide = () => {

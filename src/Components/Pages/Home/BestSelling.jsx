@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import best_laptop from "../../../assets/image/best-sell-laptop.webp";
+import best_laptop from "../../../assets/Image/best-sell-laptop.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";

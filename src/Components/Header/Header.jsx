@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/image/logo.avif";
+import logo from "../../assets/Image/logo.avif";
 import { RiStackLine } from "react-icons/ri";
 import { BiCart } from "react-icons/bi";
 import { BsHeart } from "react-icons/bs";
